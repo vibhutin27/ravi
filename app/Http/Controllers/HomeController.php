@@ -33,7 +33,7 @@ class HomeController extends Controller
                 {
                     $fileName = Storage::disk('public')->put('upload',$request->file('file'));
                     $import = new UsersImport();
-                    $import->onlySheets('mydata','Sheet1-Tableau');
+                    //$import->onlySheets('mydata','Sheet1-Tableau');
                    ($import)->import($fileName, 'public', \Maatwebsite\Excel\Excel::XLSX);
                   echo"File uploaded";
                   echo"<br>";

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateUserUploadTable extends Migration
+class CreatePostsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,11 @@ class CreateUserUploadTable extends Migration
      */
     public function up()
     {
-        Schema::create('user_uploads', function (Blueprint $table) {
-            $table->id();
-            $table->integer('QNo');
-            $table->string('QText');
-            $table->string('QValue');
+        Schema::create('posts', function (Blueprint $table) {
+            $table->id('id');
+            $table->string('title'); 
+            $table->string('slug');
+            $table->text('body');
             $table->timestamps();
             $table->timestamp('published_at')->nullable();
         });
@@ -30,6 +30,6 @@ class CreateUserUploadTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('user_uploads');
+        Schema::dropIfExists('posts');
     }
 }

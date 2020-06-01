@@ -13,14 +13,24 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/welcome', function () {
+   // $name =     request('name');
+    //  return ($name);
+
+    //below return as json data
+    //return ['foo' => 'bar'];
+    // Below return for print value in wabpage from URL
+    //return view('welcome', ['name' => $name ]);
+    return view('welcome');      
 });
+
+
 
 Route::get('/home', function () {
     return view('home');
 });
 
+Route:: get('/posts/{post}', 'PostController@show');
 //Route::get('upload', 'BudgetController@showForm');
 //Route::post('upload', 'BudgetController@store');
 

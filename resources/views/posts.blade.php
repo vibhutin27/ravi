@@ -72,31 +72,8 @@
         </style>
     </head>
     <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
+<h1>Vibhuti</h1>
 
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif
-
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel Excel
-                    //<h1> </h1>
-                </div>
-
-                <div class="section">
-                
-                </div>
-            </div>
-        </div>
+<p>{{ $post->body }}</p>
     </body>
 </html>

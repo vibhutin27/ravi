@@ -24,11 +24,11 @@ class UsersImport implements WithMultipleSheets, WithCalculatedFormulas {
 
     }
 
-    public function conditionalSheets(): array
+    /* public function conditionalSheets(): array
     {
         return [
             'mydata' => new ThirdSheetImport(),
             'Sheet1-Tableau' => new FourthSheetImport(),
         ];
-    }
+    } */
 }
